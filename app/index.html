@@ -3,23 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, a cited guide for each, a platinum roadmap, missable flags, filters and a spoiler setting.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="tagline">Every trophy, a guide in our own words with its sources, a roadmap to the platinum — and a tracker that remembers your progress. Works fully offline.</p>
+  </div>
+  <div class="progress-card" id="progressCard" aria-label="Progress">
+    <svg class="trophy-mark" viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M18 6h28v10a14 14 0 0 1-28 0V6z" fill="currentColor"/>
+      <path d="M18 10H8a10 10 0 0 0 10 14M46 10h10a10 10 0 0 1-10 14" fill="none" stroke="currentColor" stroke-width="4"/>
+      <rect x="28" y="30" width="8" height="12" fill="currentColor"/>
+      <rect x="20" y="42" width="24" height="6" rx="2" fill="currentColor"/>
+      <rect x="16" y="50" width="32" height="6" rx="2" fill="currentColor"/>
+    </svg>
+    <p class="progress-big"><span id="progressCount">0 / 55</span> earned</p>
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="grade-counts" id="gradeCounts">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="progress-note" id="progressNote">Tick a trophy when you earn it — it stays ticked in this browser.</p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<nav class="views" aria-label="Views">
+  <button type="button" class="view-tab is-active" data-view="checklist">Checklist</button>
+  <button type="button" class="view-tab" data-view="roadmap">Platinum roadmap</button>
+  <button type="button" class="view-tab" data-view="sources">Sources &amp; method</button>
+</nav>
+
+<section id="view-checklist" class="view is-active" aria-label="Trophy checklist">
+  <div class="toolbar">
+    <label class="search-box">Search
+      <input id="search" type="search" placeholder="Name, mission or guide text…" autocomplete="off">
+    </label>
+    <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind">
+      <button type="button" class="kind-btn is-active" data-kind="all">All <span class="count" id="count-all">55</span></button>
+      <button type="button" class="kind-btn" data-kind="story">Story <span class="count" id="count-story">17</span></button>
+      <button type="button" class="kind-btn" data-kind="missable">Missable <span class="count" id="count-missable">1</span></button>
+      <button type="button" class="kind-btn" data-kind="collectibles">Collectibles <span class="count" id="count-collectibles">4</span></button>
+      <button type="button" class="kind-btn" data-kind="activities">Activities <span class="count" id="count-activities">34</span></button>
+      <button type="button" class="kind-btn" data-kind="online">Online <span class="count" id="count-online">0</span></button>
+    </div>
+    <label class="grade-filter">Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+    <div class="io-buttons">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+      <button id="clearBtn" type="button" class="quiet">Clear ticks</button>
+    </div>
+  </div>
+  <p class="filter-note" id="filterNote"></p>
+  <div class="panes">
+    <ol class="trophy-list" id="trophyList"></ol>
+    <aside class="detail" id="detailPanel" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section id="view-roadmap" class="view" aria-label="Platinum roadmap">
+  <div class="roadmap-intro">
+    <h2>Roadmap to the platinum — about 200 hours</h2>
+    <p>PowerPyx rates the set 4/10 and about 200 hours: one playthrough is enough, there is no mission replay and no New Game+, and everything can be finished in free-roam after the story. The only trophy that might be missed is flagged in Stage 1.</p>
+    <div class="warnings">
+      <p><strong>Do this first:</strong> in Chapter 1, after the main mission Down to Earth, talk to Lucia in the kitchen in the morning and accept her balcony meditation — it may be required for <strong>Positive Mental Attitude</strong> and it is gone after Chapter 1. (PowerPyx)</p>
+      <p><strong>Save often:</strong> keep a manual save at the start of every chapter — the game has 15 manual slots and no mission replay, so a save is your only way back. (PowerPyx)</p>
+      <p><strong>No cheats on a trophy save:</strong> turning on a cheat disables trophies and saving. (PowerPyx)</p>
+    </div>
+  </div>
+  <div class="stages" id="roadmapStages"></div>
+  <div class="checklist-100">
+    <h3>What A Long Road (100% completion) actually asks for</h3>
+    <p>The checklist appears after the story under Progress &gt; Stats &gt; 100% Completion. It is closer to 60% of the game than a true 100% — most lines are partial, a few demand everything. (PowerPyx, Push Square)</p>
+    <ul>
+      <li>Scan 200 of 277 base-model vehicles &middot; study 100 of 255 animals with binoculars</li>
+      <li>Any 70 of 80 challenges &middot; any 100 optional missions &middot; 300 stunts</li>
+      <li>15 of 18 meditation spots &middot; 15 of 18 collectible card sets</li>
+      <li>Everything: all 8 bank vaults, all 39 gang operations, all 15 Target Decks, all shooting ranges, all drone races</li>
+      <li>Nothing on the checklist is missable — it can all be done after the credits.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="view-sources" class="view" aria-label="Sources and method">
+  <h2>Sources &amp; method</h2>
+  <p>Official trophy names, descriptions and grades are the PlayStation list as published by Exophase and PSNProfiles (cross-checked by PlanetGTA6). Every guide on this page is written in our own words for this entry: it may draw on the guides below and it names them beside each trophy, but it never copies their text. Where no method is confirmed yet — five trophies as of 19 November 2026 — the guide says so instead of guessing.</p>
+  <ul class="source-list" id="sourcesList"></ul>
+  <h3>How the list is counted</h3>
+  <ul>
+    <li>55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze. 28 of them are hidden on PlayStation until earned.</li>
+    <li>No online trophies and no difficulty trophies — the whole list is single-player and offline. (PowerPyx)</li>
+    <li>Kinds in this guide: Story (17 chapter, mission and character-quest trophies), Missable (1, possibly), Collectibles (4), Activities (34). A trophy can carry more than one kind.</li>
+    <li>Spoiler setting: with “Hide story spoilers” on, story trophies you have not earned yet show no name or description — tick one as earned and it is revealed.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Leonida Trophy Guide — an unofficial fan guide. Names, descriptions and grades are PlayStation's official trophy list; guide text is our own, with sources cited per trophy. No Rockstar Games logo, artwork or game imagery is used. All data lives in <code>app/data/trophies.json</code>; progress is saved only in this browser (localStorage) and can be exported and imported.</p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>

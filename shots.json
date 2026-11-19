@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.jpg","path":"/#/trophy/28","setup":"spoilers off, 6 trophies ticked, Positive Mental Attitude selected with its guide and sources open","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","path":"/#/roadmap","setup":"platinum roadmap, all three stages with the missable warning","viewport":{"height":800,"width":1280}},{"file":"3-filters.jpg","path":"/#/trophy/28","setup":"spoilers on, Missable filter active, export/import buttons in the toolbar","viewport":{"height":800,"width":1280}},{"file":"4-detail.jpg","path":"/#/trophy/17","setup":"spoilers off, The Shootist selected with its full guide and sources open","viewport":{"height":800,"width":1280}}]
